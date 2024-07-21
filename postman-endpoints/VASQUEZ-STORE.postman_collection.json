@@ -1,0 +1,571 @@
+{
+	"info": {
+		"_postman_id": "398ae2b1-1b05-4cc7-84a2-e918aed0f2ea",
+		"name": "VASQUEZ-STORE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15626303"
+	},
+	"item": [
+		{
+			"name": "PRODUCTS-REQUEST",
+			"item": [
+				{
+					"name": "AllProducts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/product/all",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"product",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \r\n    \"name\": \"Sandía\",\r\n    \"categoryId\": 1,\r\n    \"price\": 12.00,\r\n    \"stock\": 14,\r\n    \"active\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/product/save",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"product",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ProductById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/product/52",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"product",
+								"52"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ProductById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/product/delete/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"product",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ScarceProducts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/product/scarce?quantity=1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"product",
+								"scarce"
+							],
+							"query": [
+								{
+									"key": "quantity",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ProductsByCategory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/product/category/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"product",
+								"category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateProduct",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \r\n    \"name\": \"Sandía\",\r\n    \"categoryId\": 1,\r\n    \"price\": 12.00,\r\n    \"stock\": 14,\r\n    \"active\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/product/update/52",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"product",
+								"update",
+								"52"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CATEROGY-REQUEST",
+			"item": [
+				{
+					"name": "Categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/category/all",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"category",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"BEBIDAS\",\r\n    \"active\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/category/save",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"category",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/category/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Category",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/category/delete/9",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"category",
+								"delete",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActiveCategories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/category/all/active",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"category",
+								"all",
+								"active"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DesactiveCategories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/category/all/desactive",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"category",
+								"all",
+								"desactive"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateProduct",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Lácteos y Huevos\",\r\n    \"active\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/category/update/4",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"category",
+								"update",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdatePartialProduct",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "kk",
+									"value": "kk",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/category/patch/4",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"category",
+								"patch",
+								"4"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Lácteos y Huevos",
+									"disabled": true
+								},
+								{
+									"key": "active",
+									"value": "true",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CLIENT-REQUEST",
+			"item": [
+				{
+					"name": "GetAllClient",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/client/all",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"client",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SaveClient",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientId\": \"75073058\",\r\n    \"name\": \"Jhonatan\",\r\n    \"lastname\": \"Vasquez Reyna\",\r\n    \"phone\": \"958637004\",\r\n    \"address\": \"CPM Cambio Puente Mz V1 Lt 6\",\r\n    \"email\": \"jhona141200@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/client/save",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"client",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetClientById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/client/75073058",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"client",
+								"75073058"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateClient",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Jhonatan Ernesto\",\r\n    \"lastname\": \"Vasquez Reyna\",\r\n    \"phone\": \"958637004\",\r\n    \"address\": \"CPM Cambio Puente Mz V1 Lt 6\",\r\n    \"email\": \"jhona141200@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/client/update/75073058",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"client",
+								"update",
+								"75073058"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteClientById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/client/delete/75073058",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"client",
+								"delete",
+								"75073058"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PURCHASE-REQUEST",
+			"item": [
+				{
+					"name": "Purchases",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/purchase/all",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"purchase",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PurchaseByClient",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/purchase/client/75073058",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"purchase",
+								"client",
+								"75073058"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Purchase",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/purchase/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"purchase",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Purchase",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientId\": \"75073058\",\r\n    \"date\": \"2021-10-21T22:14:42.457\",\r\n    \"paymentMethod\": \"E\",\r\n    \"comment\": \"Compra con descuentos exclusivos\",\r\n    \"status\": \"P\",\r\n    \"items\": [\r\n        {\r\n            \"productId\": 1,\r\n            \"quantity\": 100,\r\n            \"total\": 600.0,\r\n            \"active\": true\r\n        },\r\n        {\r\n            \"productId\": 4,\r\n            \"quantity\":10,\r\n            \"total\": 2500.0,\r\n            \"active\": true\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/purchase/save",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"purchase",
+								"save"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:1412/bethys-market/api"
+		}
+	]
+}
